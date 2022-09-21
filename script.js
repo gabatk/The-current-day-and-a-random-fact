@@ -12,3 +12,17 @@ const facts = [
 	'Chińczycy w ciągu roku zużywają około 80 miliardów pałeczek.',
 	'Żeby wejść na Wieżę Eiffla trzeba pokonać aż 1710 stopni.'
 ]
+
+const day = new Date()
+const today = day.toLocaleDateString("pl", { weekday: 'long' })
+// console.log(day.toLocaleDateString("pl", { weekday: 'short' }))   - zapis srócony nazwy dnia
+
+currentDay.textContent = today
+
+const showFact = () => {
+	const number = Math.floor(Math.random () * (facts.length-1))
+
+	funFact.textContent = facts[number]
+}
+
+showFact()
